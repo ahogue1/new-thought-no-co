@@ -10,15 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180618172250) do
+ActiveRecord::Schema.define(version: 20180618174402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
-    t.integer "general_price"
-    t.integer "member_price"
-    t.integer "tithe_price"
     t.integer "seats"
     t.string "facilitator"
     t.date "start_date"
@@ -30,6 +27,9 @@ ActiveRecord::Schema.define(version: 20180618172250) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "event_type"
+    t.integer "general_price_cents", default: 0, null: false
+    t.integer "member_price_cents", default: 0, null: false
+    t.integer "tithe_price_cents", default: 0, null: false
   end
 
   create_table "prayer_requests", force: :cascade do |t|
