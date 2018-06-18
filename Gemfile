@@ -19,6 +19,7 @@ gem 'uglifier'
 gem 'webpacker'
 
 gem 'money-rails', '~> 1.6', '>= 1.6.1'
+gem 'rails_admin', '~> 1.3'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
