@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   
   resources :events, only: [:index]
+  resources :prayer_requests, only: [:new, :create, :edit]
 end
