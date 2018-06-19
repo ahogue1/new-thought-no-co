@@ -10,6 +10,10 @@ class User < ApplicationRecord
     role == "admin"
   end
 
+  def role_enum
+    %w(general admin member)
+  end
+
   rails_admin do
     exclude_fields(
       :reset_password_sent_at,
@@ -24,5 +28,10 @@ class User < ApplicationRecord
       :prayer_requests,
       :registrations
     )
+
+    field :role do
+      pretty_value { value.capitalize }
+    end
   end
+
 end
