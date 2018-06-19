@@ -10,9 +10,15 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "About Us", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Events", events_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "I'm New", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Events/Classes", events_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Youth", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Who We Are", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Prayer Request", new_prayer_request_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "About Us", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Groups", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Serve & Give", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Venue Rental", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
