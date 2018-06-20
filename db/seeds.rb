@@ -6,18 +6,25 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Group.destroy_all
+PrayerRequest.destroy_all
+Registration.destroy_all
+Event.destroy_all
+User.destroy_all
+
+
 general_user = User.create!(
-  first_name:"User", 
-  last_name:"Smith", 
-  email:"user@mail.com", 
+  first_name:"User",
+  last_name:"Smith",
+  email:"user@mail.com",
   password:"123456"
 )
 
 admin_user = User.create!(
-  first_name:"Admin", 
-  last_name:"Smith", 
-  email:"admin@mail.com", 
-  password:"123456", 
+  first_name:"Admin",
+  last_name:"Smith",
+  email:"admin@mail.com",
+  password:"123456",
   role:"admin"
 )
 
@@ -84,4 +91,16 @@ PrayerRequest.create!(
   phone: "970-444-4444",
   user: general_user,
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+)
+
+Group.create!(
+  name: "Love in action",
+  description: "Pastoral care team that provides comfort and support to members of the NTNC congregation in the form of hospital visits, phone calls of support, cards for celebration or encouragement, meals for congregants and their families and other acts to aid those in need of support. This team also helps determine which outreach project in the greater community NTNC will participate in or undertake. Contact: revjenny@newthoughtnoco.org",
+  schedule: "Mondays at 10 a.m."
+)
+
+Group.create!(
+  name: "SPIRITUAL DISCUSSION GROUP",
+  description: "A spiritual discussion group based on the current Science of Mind magazine is led by Debra J. This group is limited to 12 participants but there is still room. Contact: debraJ@newthoughtnoco.org.",
+  schedule: "Wednesday at 10:30 a.m."
 )
