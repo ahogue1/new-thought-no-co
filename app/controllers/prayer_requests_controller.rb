@@ -6,10 +6,22 @@ class PrayerRequestsController < ApplicationController
 
   def create
     @prayer_request = PrayerRequest.new(prayer_request_params)
+
+    if @prayer_request.save
+      redirect_to root_path, notice: "We've Received Your Prayer Request"
+    else
+      render :new
+    end
   end
 
   def new
     @prayer_request = PrayerRequest.new
+  end
+
+  private
+
+  def prayer_request_params
+    params.require(:prayer_request).permit(:name, :email, :phone, :method, :content)
   end
 
 end
