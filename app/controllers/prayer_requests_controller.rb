@@ -9,7 +9,7 @@ class PrayerRequestsController < ApplicationController
   end
 
   def new
-     @prayer_request = PrayerRequest.new
-   end
+    @prayer_request = PrayerRequest.new
+  end
 
 end
