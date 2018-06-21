@@ -8,6 +8,7 @@ class PrayerRequestsController < ApplicationController
     @prayer_request = PrayerRequest.new(prayer_request_params)
 
     if @prayer_request.save
+      ContactMailer.prayer_request(@prayer_request).deliver_now
       redirect_to root_path, notice: "We've Received Your Prayer Request"
     else
       render :new

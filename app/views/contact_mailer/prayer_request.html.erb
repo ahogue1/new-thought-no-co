@@ -1,0 +1,39 @@
+<h1>New Prayer Request</h1>
+
+<p>
+  <% if @request.name.blank? %>
+    No name provided.
+  <% else %>
+    New request from <%= @request.name %>.
+  <% end %>
+
+  <% if @request.method.blank? %>
+    No method specified.
+  <% else %>
+   Would like to receive a prayer <%= @request.method.downcase %>.
+  <% end %>
+</p>
+
+<p>
+  Please send prayers for: "<%= @request.content %>"
+</p>
+
+<% if @request.phone.blank? && @request.email.blank? %>
+  <p>No contact information provided.</p>
+<% else %>
+  <p>
+    Contact Information:
+    <ul>
+      <% unless @request.phone.blank? %>
+        <li>
+          Phone Number: <%= @request.phone %>
+        </li>
+      <% end %>
+      <% unless @request.email.blank? %>
+        <li>
+          Email: <%= @request.email %>
+        </li>
+      <% end %>
+    </ul>
+  </p>
+<% end %>
