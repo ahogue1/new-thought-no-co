@@ -1,5 +1,5 @@
 <div class="container-fluid home-container">
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -10,22 +10,24 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
 
-      <div class="item active" style="background-image: url(<%= image_path "talks.jpg" %>)">
-        <div class="carousel-caption">
-          <h3>Sunday Service Time</h3>
-          </div>
+      <div class="item active" style="background-image: url(<%= image_path "sunset-tree.jpg" %>)">
+          <h1 class="main-heading">Welcome to New Thought NoCo</h1>
+          <h3 class ="carousel-sub-heading">Sunday Service Time</h3>
         </div>
 
-      <div class="item" style="background-image: url(<%= image_path "talks.jpg" %>)">
-        <div class="carousel-caption">
-          <h3>Listen to recent talks</h3>
+      <div class="item" style="background-image: url(<%= image_path "clouds.jpg" %>)">
+        <h1 class="main-heading">Welcome to New Thought NoCo</h1>
+        <h3 class="carousel-sub-heading">Listen to our recent talks</h3>
+          <div class="carousel-caption">
           </div>
         </div>
 
        <% if @event %>
-        <div class="item" style="background-image: url(<%= image_path "event.jpg" %>)">
+        <div class="item" style="background-image: url(<%= image_path "mountains-lake.jpg" %>)">
+          <h1 class="main-heading">Welcome to New Thought NoCo</h1>
+          <h2 class="carousel-sub-heading">Upcoming Event:</h2>
+          <h3 class="carousel-sub-heading"><%= @event.title %></h3>
           <div class="carousel-caption">
-            <h3><%= @event.title %></h3>
             <p><%= @event.description %></p>
           </div>
         </div>
@@ -48,3 +50,4 @@
 </div>
 
 <%= render 'location' %>
+
