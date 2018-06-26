@@ -11,6 +11,16 @@
   width: 100%;
   background-size: cover;
   background-position: center;
+  text-align: center;
+}
+
+.location-btn{
+  margin: 45px;
+  padding: 9px 26px 0;
+}
+
+.clickable-carousel:hover{
+    text-decoration: none;
 }
 
 .carousel-item{
