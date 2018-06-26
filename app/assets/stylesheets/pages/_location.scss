@@ -1,11 +1,24 @@
 .location {
   background: black;
-  align-items: center;
-  justify-content: space-between;
-  height: 479px;
-  padding: 28px 0px;
+  height: 500px;
+  padding: 50px 57px;
   color: rgba(0,0,0,0.3);
 }
+
+.location-box{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  width: 1166px;
+  margin: 0 auto;
+}
+
+.find-us-box{
+  h6{
+  padding-bottom: 73px;
+ }
+}
+
 .location-links {
   align-items: center;
 }
@@ -20,10 +33,9 @@
 }
 
 .location-container{
-  display: flex;
   color: white;
   justify-content: space-evenly;
-  align-items: center;
+  padding: 0 35px;
   h6{
     color: $blue;
     font-size: 32px;
@@ -37,12 +49,13 @@
   display: flex;
   justify-content: space-between;
   margin: 25px 0 33px;
+  width: 390px;
 }
 
 .location-contact{
   vertical-align: top;
   text-align: center;
-  height: 298px;
+  height: 200px;
   margin: 52px 0 0;
   a{
     color: white;
@@ -57,4 +70,7 @@
 
 .location-service-times{
   padding-bottom: 20px;
+  h6{
+    padding-bottom: 26px;
+  }
 }
