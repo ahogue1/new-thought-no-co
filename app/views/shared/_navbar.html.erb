@@ -8,29 +8,22 @@
   <div class="navbar-ntnoco-links hidden-xs hidden-sm">
         <!-- I'm New -->
         <div class="dropdown">
-          <%= link_to "I'm New", "#", class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
+          <%= link_to "About Us", "#", class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-ntnoco-dropdown-menu">
             <li>
-              <%= link_to "Our Services", "#" %>
+              <%= link_to "What is New Thought?", "#" %>
             </li>
             <li>
-              <%= link_to "What is New Thought", "#" %>
+              <%= link_to "Ministers", "#" %>
             </li>
              <li>
-              <%= link_to "Listen to Recent Talks", "#" %>
-            </li>
-          </ul>
-        </div>
-
-      <!-- events -->
-        <div class="dropdown">
-          <%= link_to "Events/Classes", "#", class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-ntnoco-dropdown-menu">
-            <li>
-              <%= link_to "Clases", events_path %>
+              <%= link_to "Practitioners", "#" %>
             </li>
             <li>
-              <%= link_to "Events", events_path %>
+              <%= link_to "Core Council", "#" %>
+            </li>
+            <li>
+              <%= link_to "Staff", "#" %>
             </li>
           </ul>
         </div>
@@ -51,15 +44,25 @@
           </ul>
         </div>
 
-  <!-- Groups -->
-       <div class="dropdown">
-          <%= link_to "Groups", groups_path, class: "navbar-ntnoco-item navbar-ntnoco-link navbar-ntnoco-menu" %>
+      <!-- events -->
+        <div class="dropdown">
+          <%= link_to "Be Connected", "#", class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
+          <ul class="dropdown-menu dropdown-menu-right navbar-ntnoco-dropdown-menu">
+            <li>
+              <%= link_to "Clases", events_path %>
+            </li>
+            <li>
+              <%= link_to "Events", events_path %>
+            </li>
+             <li>
+              <%= link_to "Groups", events_path %>
+            </li>
+          </ul>
         </div>
 
-
-    <!-- Prayer Request -->
+    <!-- Be Inspired -->
     <div class="dropdown">
-      <%= link_to "Prayer Request", new_prayer_request_path, class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
+      <%= link_to "Be Inspired", new_prayer_request_path, class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
         <ul class="dropdown-menu dropdown-menu-right navbar-ntnoco-dropdown-menu">
           <li>
             <%= link_to "Prayer Request", new_prayer_request_path %>
@@ -67,31 +70,24 @@
           <li>
             <%= link_to "Inspiration Blog", "#" %>
           </li>
-          <li>
-            <%= link_to "Emergency Hospital Visit", "#" %>
-          </li>
         </ul>
       </div>
 
   <!-- Groups -->
-  <!--   <div class="dropdown">
-      <%= link_to "Groups", "#", class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
-        <ul class="dropdown-menu dropdown-menu-right navbar-ntnoco-dropdown-menu">
-          <li>
-            <%= link_to "Join a Group", "#" %>
-          </li>
-        </ul>
-      </div> -->
+       <div class="dropdown">
+          <%= link_to "Groups", groups_path, class: "navbar-ntnoco-item navbar-ntnoco-link navbar-ntnoco-menu" %>
+        </div>
+
 
  <!-- Serve and Give -->
       <div class="dropdown">
-      <%= link_to "Serve & Give", "#", class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
+      <%= link_to "Be of Service", "#", class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
         <ul class="dropdown-menu dropdown-menu-right navbar-ntnoco-dropdown-menu">
           <li>
             <%= link_to "Community Outreach & Pastoral Care", "#" %>
           </li>
           <li>
-            <%= link_to "Volunteer", "#" %>
+            <%= link_to "Volunteering", "#" %>
           </li>
           <li>
             <%= link_to "Ways to Give", "#" %>
@@ -99,14 +95,18 @@
           <li>
             <%= link_to "Grocery Cards/Scrip", "#" %>
           </li>
+          <li>
+            <%= link_to "Center Membership", "#" %>
+          </li>
         </ul>
       </div>
 
-  <!--     <%= link_to "Venue Rental", "#", class: "navbar-ntnoco-item navbar-ntnoco-link" %> -->
-
+    <div>
+      <%= link_to "Venue Rental", "#", class: "navbar-ntnoco-item navbar-ntnoco-link" %>
+    </div>
       <!-- Avatar with dropdown menu -->
 
-    <% if user_signed_in? %>
+<!--     <% if user_signed_in? %>
       <div class="navbar-ntnoco-item">
         <div class="dropdown">
           <%= link_to 'Sign Out', "#", class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
@@ -128,11 +128,11 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div> -->
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-ntnoco-item navbar-ntnoco-link" %>
-    <% end %>
+ <!--      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-ntnoco-item navbar-ntnoco-link" %>
+    <% end %> -->
   </div>
 
   <!-- Dropdown list appearing on mobile only -->

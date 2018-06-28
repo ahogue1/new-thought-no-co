@@ -1,8 +1,9 @@
 .footer-links .fa {
   text-decoration: none;
   font-size: 24px;
-  padding: 0px 10px;
+  padding: 0px 10px 0 0;
 }
+
 
 .footer{
   a {
@@ -10,34 +11,40 @@
   }
  p {
   color: white;
-  font-weight: lighter;
   margin: 0;
  }
+}
+
+.footer-contact{
+  display: flex;
+}
+
+.contact-details{
+  margin: 11px 50px;
+  font-size: 17px;
+  font-weight: lighter;
 }
 
 .footer {
   background: black;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 43px;
-  padding: 40px;
-  margin-top: 50px;
+  height: 155px;
+  padding: 23px 70px;
+  color: white;
+  margin-top: -6px;
+  h6{
+    font-size: 23px;
+    color: $blue;
+    }
 }
 
-.footer-links {
-  display: flex;
-  align-items: center;
+.footer-email{
+  margin: 10px 0;
 }
 
 .footer-links a:hover {
   color: $blue;
   text-decoration: none;
-}
-.foot-phone{
-  font-size: 1em;
-  font-weight: lighter;
-  margin-left: 1em;
 }
 
 .yam-footer{

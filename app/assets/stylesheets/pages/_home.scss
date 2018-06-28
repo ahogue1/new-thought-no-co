@@ -6,6 +6,7 @@
 .blue-text{
   color: $blue;
 }
+
 .item{
   height: 100vh;
   width: 100%;
@@ -42,6 +43,9 @@
 .carousel-sub-heading{
   text-align: center;
   color: white;
-
+  background: #000000a6;
+  width: 600px;
+  margin: 0 auto;
+  padding: 13px;
 }
 
