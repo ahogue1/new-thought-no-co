@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get 'youth', to: 'pages#youth'
+  get 'blog', to: 'pages#blog'
 
   resources :events, only: [:index]
   resources :groups, only: [:index]

@@ -7,4 +7,8 @@ class PagesController < ApplicationController
   def youth
   end
 
+  def blog
+    @posts = BloggerService.new.get_posts
+  end
+
 end
