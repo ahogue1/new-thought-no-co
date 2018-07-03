@@ -11,7 +11,7 @@
           <%= link_to "About Us", "#", class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-ntnoco-dropdown-menu">
             <li>
-              <%= link_to "What is New Thought?", "#" %>
+              <%= link_to "What is New Thought?", about_path %>
             </li>
             <li>
               <%= link_to "Ministers", "#" %>
@@ -33,13 +33,13 @@
           <%= link_to "Youth", "#", class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-ntnoco-dropdown-menu">
             <li>
-              <%= link_to "Youth Program", "#" %>
+              <%= link_to "Youth Program", youth_path %>
             </li>
             <li>
-              <%= link_to "Youth Staff", "#" %>
+              <%= link_to "Youth Staff", youth_path %>
             </li>
             <li>
-              <%= link_to "Youth Outreach", "#" %>
+              <%= link_to "Youth Outreach", youth_path %>
             </li>
           </ul>
         </div>
@@ -55,7 +55,7 @@
               <%= link_to "Events", events_path %>
             </li>
              <li>
-              <%= link_to "Groups", events_path %>
+              <%= link_to "Groups", groups_path %>
             </li>
           </ul>
         </div>
@@ -68,7 +68,7 @@
             <%= link_to "Prayer Request", new_prayer_request_path %>
           </li>
           <li>
-            <%= link_to "Inspiration Blog", "#" %>
+            <%= link_to "Inspiration Blog", blog_path %>
           </li>
         </ul>
       </div>
@@ -77,28 +77,28 @@
 
  <!-- Serve and Give -->
       <div class="dropdown">
-      <%= link_to "Be of Service", "#", class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
+      <%= link_to "Be of Service", give_path, class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
         <ul class="dropdown-menu dropdown-menu-right navbar-ntnoco-dropdown-menu">
           <li>
-            <%= link_to "Community Outreach & Pastoral Care", "#" %>
+            <%= link_to "Community Outreach & Pastoral Care", give_path %>
           </li>
           <li>
-            <%= link_to "Volunteering", "#" %>
+            <%= link_to "Volunteering", give_path %>
           </li>
           <li>
-            <%= link_to "Ways to Give", "#" %>
+            <%= link_to "Ways to Give", give_path %>
           </li>
           <li>
-            <%= link_to "Grocery Cards/Scrip", "#" %>
+            <%= link_to "Grocery Cards/Scrip", give_path %>
           </li>
           <li>
-            <%= link_to "Center Membership", "#" %>
+            <%= link_to "Center Membership", give_path %>
           </li>
         </ul>
       </div>
 
     <div>
-      <%= link_to "Venue Rental", "#", class: "navbar-ntnoco-item navbar-ntnoco-link" %>
+      <%= link_to "Venue Rental", venue_path, class: "navbar-ntnoco-item navbar-ntnoco-link" %>
     </div>
       <!-- Avatar with dropdown menu -->
 

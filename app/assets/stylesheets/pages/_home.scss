@@ -1,8 +1,4 @@
 // Specific CSS for your home-page
-.home-container{
-  min-height: 400px;
-}
-
 .blue-text{
   color: $blue;
 }
@@ -26,7 +22,7 @@
 }
 
 .carousel-item{
-  height: 100vh;
+  height: calc(100vh - 70px);
   width: 100%;
   background-size: cover;
   background-position: center;
