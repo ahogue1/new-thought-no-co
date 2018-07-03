@@ -31,9 +31,11 @@
     <% end %>
 
        <% if @event %>
-        <div class="item" style="background-image: url(<%= image_path "mountains-lake.jpg" %>)">
-          <h3 class="carousel-sub-heading">Upcoming Event:</h3>
-          <h2 class="carousel-sub-heading"><%= @event.title %></h2>
+        <div class="item event-slide" style="background-image: url(<%= image_path "mountains-lake.jpg" %>)">
+          <div class="event-box">
+            <h3 class="main-heading">Upcoming Event:</h3>
+            <h2 class="carousel-sub-heading"><%= @event.title %></h2>
+          </div>
           <div class="carousel-caption">
             <p><%= @event.description %></p>
           </div>
