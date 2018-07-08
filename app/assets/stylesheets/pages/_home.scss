@@ -1,10 +1,15 @@
 // Specific CSS for your home-page
+.carousel-row{
+  // height: 700px;
+  // overflow: none;
+}
+
 .blue-text{
   color: $blue;
 }
 
 .item{
-  height: 100vh;
+  height: calc(100vh - 140px);
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -22,7 +27,7 @@
 }
 
 .carousel-item{
-  height: calc(100vh - 70px);
+  // height: calc(100vh - 70px);
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -52,4 +57,8 @@
     text-align: center;
     padding-top: 200px;
      }
+}
+
+.watercolor{
+  height: 900px;
 }

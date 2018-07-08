@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   def about
   end
 
+
   def blog
     @posts = BloggerService.new.get_posts
   end
@@ -12,6 +13,9 @@ class PagesController < ApplicationController
 
   def home
     @event = Event.last
+  end
+
+  def staff
   end
 
   def venue
