@@ -21,7 +21,7 @@
         </div>
     <% end %>
 
-  <!--   <%= link_to "#talks", class: "clickable-carousel" do %>
+    <%= link_to "#talks", class: "clickable-carousel" do %>
       <div class="item" style="background-image: url(<%= image_path "clouds.jpg" %>)">
         <h1 class="main-heading">Welcome to New Thought NoCo</h1>
         <h3 class="carousel-sub-heading">Listen to our recent talks</h3>
@@ -41,7 +41,7 @@
             <p><%= @event.description %></p>
           </div>
         </div>
-      <% end %> -->
+      <% end %>
 
       </div>
     <!-- Controls -->
@@ -59,6 +59,8 @@
   <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
 
   <%= render 'welcome' %>
+
+  <%= render 'youth_home' %>
 
   <%= render 'talks' %>
 
