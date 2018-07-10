@@ -22,8 +22,8 @@
     <% end %>
 
     <%= link_to "#talks", class: "clickable-carousel" do %>
-      <div class="item" style="background-image: url(<%= image_path "clouds.jpg" %>)">
-        <h1 class="main-heading">Welcome to New Thought NoCo</h1>
+      <div class="item" style="background-image: url(<%= image_path "mountain.jpg" %>)">
+        <h2 class="main-heading">Discover Us:</h2>
         <h3 class="carousel-sub-heading">Listen to our recent talks</h3>
         <%= link_to "#talks", class: "btn btn-primary location-btn" do%>
             <p>Listen Now</p>
@@ -31,8 +31,18 @@
       </div>
     <% end %>
 
+      <%= link_to "#youth_home", class: "clickable-carousel" do %>
+      <div class="item" style="background-image: url(<%= image_path "kid-paint.jpg" %>)">
+        <h2 class="main-heading">Kids Connect</h2>
+        <h3 class="carousel-sub-heading">Find a youth program</h3>
+        <%= link_to "#youth", class: "btn btn-primary location-btn" do%>
+            <p>Learn More</p>
+          <% end %>
+      </div>
+    <% end %>
+
        <% if @event %>
-        <div class="item event-slide" style="background-image: url(<%= image_path "mountains-lake.jpg" %>)">
+        <div class="item event-slide" style="background-image: url(<%= image_path "walk.jpg" %>)">
           <div class="event-box">
             <h3 class="main-heading">Upcoming Event:</h3>
             <h2 class="carousel-sub-heading"><%= @event.title %></h2>
