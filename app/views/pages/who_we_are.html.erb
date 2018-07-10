@@ -1,24 +1,56 @@
-<div class="container page-container">
+<div class="container-fluid">
+  <div class="row">
+    <div class="banner" style="background-image: url(<%= image_path('hands.jpg')%>);">
 
-    <h1>Who We Are</h1>
+      <div class="banner-heading">
+        <h1>Who We Are</h1>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <h3 id="ministers">Ministers</h3>
+  <div class="container">
+    <div class="navbar-sticky navbar-filters" style="justify-content: space-around; background-color: white; ">
+
+     <div class="sub-navbar-newthought-item hidden-md hidden-lg">
+        <div class="dropdown">
+          <i class="fa fa-bars dropdown-toggle" style="color: black;" data-toggle="dropdown"></i>
+          <ul class="dropdown-menu">
+            <li><a href="#ministers" style="font-size: 14px;">Ministers</a></li>
+            <li><a href="#practitioners" style="font-size: 14px;">Practitioners</a></li>
+            <li><a href="#core-council" style="font-size: 14px;">Core Council</a></li>
+            <li><a href="#staff" style="font-size: 14px;">Core Council</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <a href="#ministers" class="hidden-xs hidden-sm"><h4>Ministers</h4></a>
+      <a href="#practitioners" class="hidden-xs hidden-sm"><h4>Practitioners</h4></a>
+      <a href="#core-council" class="hidden-xs hidden-sm"><h4>Core Council</h4></a>
+      <a href="#staff" class="hidden-xs hidden-sm"><h4>Staff</h4></a>
+
+
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
 
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-      <h4>SENIOR MINISTER – REVEREND BARBARA BUE</h4>
-      <p>
-        Rev. Barb is passionate about personal transformation and the power of individuals to change their lives by changing their minds.  She is a dynamic speaker whose messages are clear and heart-warming – listeners exclaim in recognition, nod in agreement and feel things deeply.
-      </p>
-      <p>
-        Rev Barb is an effective and engaging teacher; she supports your dream, encourages you to know it for yourself, challenges your limiting ideas, and she’ll ask you to do the work to have the life you’d love. She wants everyone to embrace his or her gifts and SHARE THEM! Barb believes that transforming individual lives is the step to transforming the planet into a world that works for everyone.
-      </p>
-      <p>
-        Believing the Divine does great work through humor, she really wants to make you laugh and grow.  “Spiritual growth should be exciting-not scary,” (Reverend Barb Bue.) “One of her greatest qualities is that she can help people see their own potential and guide without judgment,” (Student.)
-      </p>
-      <p>
-        Barb graduated from ministerial school in 2007 after spending a year as an interim minister in Greeley.  She stayed on as Senior Minister because she fell in love with the congregation.  She served as Senior Minister in Greeley for 7 years until 2016 when she stepped into a new position as Senior Minister of New Thought No CO, a merger of two churches, three congregations and the opening of a new spiritual home in Loveland where everyone is welcome. Welcome home.
-      </p>
+        <h3 id="ministers">Ministers</h3>
+
+        <h4>SENIOR MINISTER – REVEREND BARBARA BUE</h4>
+       <p>
+          Rev. Barb is passionate about personal transformation and the power of individuals to change their lives by changing their minds.  She is a dynamic speaker whose messages are clear and heart-warming – listeners exclaim in recognition, nod in agreement and feel things deeply.
+        </p>
+        <p>
+          Rev Barb is an effective and engaging teacher; she supports your dream, encourages you to know it for yourself, challenges your limiting ideas, and she’ll ask you to do the work to have the life you’d love. She wants everyone to embrace his or her gifts and SHARE THEM! Barb believes that transforming individual lives is the step to transforming the planet into a world that works for everyone.
+        </p>
+        <p>
+          Believing the Divine does great work through humor, she really wants to make you laugh and grow.  “Spiritual growth should be exciting-not scary,” (Reverend Barb Bue.) “One of her greatest qualities is that she can help people see their own potential and guide without judgment,” (Student.)
+        </p>
+        <p>
+          Barb graduated from ministerial school in 2007 after spending a year as an interim minister in Greeley.  She stayed on as Senior Minister because she fell in love with the congregation.  She served as Senior Minister in Greeley for 7 years until 2016 when she stepped into a new position as Senior Minister of New Thought No CO, a merger of two churches, three congregations and the opening of a new spiritual home in Loveland where everyone is welcome. Welcome home.
+        </p>
       </div>
     </div>
 
@@ -44,7 +76,7 @@
       </div>
     </div>
 
-  <div class="row">
+  <div id="practitioners" class="row">
     <div class="col-md-8 col-md-offset-2">
       <%= render 'practitioners' %>
     </div>
