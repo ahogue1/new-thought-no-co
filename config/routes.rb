@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'blog', to: 'pages#blog'
   get 'groups', to: 'pages#groups'
   get 'give', to: 'pages#give'
-  get 'staff', to: 'pages#staff'
+  get 'who_we_are', to: 'pages#who_we_are'
   get 'venue', to: 'pages#venue'
   get 'youth', to: 'pages#youth'
 

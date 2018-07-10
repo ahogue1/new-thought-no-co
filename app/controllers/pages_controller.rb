@@ -15,7 +15,7 @@ class PagesController < ApplicationController
     @event = Event.last
   end
 
-  def staff
+  def who_we_are
   end
 
   def venue
