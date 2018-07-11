@@ -6,6 +6,9 @@
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <% if @event %>
+          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        <% end %>
       </ol>
 
     <!-- Wrapper for slides -->
@@ -35,7 +38,7 @@
       <div class="item" style="background-image: url(<%= image_path "kid-paint.jpg" %>)">
         <h2 class="main-heading">Kids Connect</h2>
         <h3 class="carousel-sub-heading">Find a youth program</h3>
-        <%= link_to "#youth", class: "btn btn-primary location-btn" do%>
+        <%= link_to "youth", class: "btn btn-primary location-btn" do%>
             <p>Learn More</p>
           <% end %>
       </div>
