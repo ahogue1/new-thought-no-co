@@ -20,11 +20,6 @@
     background-color: #2a5e7bb5; /* Add a dark-grey background on hover */
 }
 
-.carousel-row{
-  // height: 700px;
-  // overflow: none;
-}
-
 .blue-text{
   color: $blue;
 }
@@ -99,6 +94,6 @@
 
 .new-thought{
   justify-content: center;
-  display: flex;
+  font-weight: bolder;
   margin: 0;
 }
