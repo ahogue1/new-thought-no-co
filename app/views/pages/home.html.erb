@@ -16,18 +16,21 @@
       <%= link_to "#location", class: "clickable-carousel" do %>
 
         <div class="item active" style="background-image: url(<%= image_path "sunset-tree.jpg" %>)">
-            <h1 class="main-heading welcome-heading">Welcome to New Thought NoCo</h1>
-            <h3 class ="carousel-sub-heading">Sunday Service: 10 am - 11 am</h3>
+          <div class="main-heading">
+            <h3 class="welcome-heading">Welcome to</h3>
+            <h1 class="new-thought">New Thought Northern Colorado</h1>
+          </div>
+            <h4 class ="carousel-sub-heading">Sunday Service: 10 am - 11:15</h4>
           <%= link_to "#location", class: "btn btn-primary location-btn" do%>
-            <p>Get Location</p>
+            <p>Location</p>
           <% end %>
         </div>
     <% end %>
 
     <%= link_to "#talks", class: "clickable-carousel" do %>
       <div class="item" style="background-image: url(<%= image_path "mountain.jpg" %>)">
-        <h2 class="main-heading">Discover Us:</h2>
-        <h3 class="carousel-sub-heading">Listen to our recent talks</h3>
+        <h3 class="main-heading">Discover Us</h3>
+        <h2 class="carousel-sub-heading">Listen to our recent talks</h2>
         <%= link_to "#talks", class: "btn btn-primary location-btn" do%>
             <p>Listen Now</p>
           <% end %>
@@ -36,8 +39,8 @@
 
       <%= link_to "#youth_home", class: "clickable-carousel" do %>
       <div class="item" style="background-image: url(<%= image_path "kid-paint.jpg" %>)">
-        <h2 class="main-heading">Kids Connect</h2>
-        <h3 class="carousel-sub-heading">Find a youth program</h3>
+        <h3 class="main-heading">Kids Connect</h3>
+        <h2 class="carousel-sub-heading">Find a youth program</h2>
         <%= link_to "youth", class: "btn btn-primary location-btn" do%>
             <p>Learn More</p>
           <% end %>
@@ -57,7 +60,7 @@
       <% end %>
 
       </div>
-    <!-- Controls -->
+ <!--    Controls -->
       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
