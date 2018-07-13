@@ -20,24 +20,13 @@
         </div>
 
          <!-- Youth -->
-        <div class="dropdown">
-          <%= link_to "Youth", "#", class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-ntnoco-dropdown-menu">
-            <li>
-              <%= link_to "Youth Program", youth_path %>
-            </li>
-            <li>
-              <%= link_to "Youth Staff", youth_path %>
-            </li>
-            <li>
-              <%= link_to "Youth Outreach", youth_path %>
-            </li>
-          </ul>
+        <div>
+          <%= link_to "Youth", youth_path, class: "navbar-ntnoco-item navbar-ntnoco-link navbar-ntnoco-menu" %>
         </div>
 
       <!-- events -->
         <div class="dropdown">
-          <%= link_to "Be Connected", "#", class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
+          <%= link_to "Be Connected", events_path, class: "navbar-ntnoco-item navbar-ntnoco-link dropdown-toggle navbar-ntnoco-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-ntnoco-dropdown-menu">
             <li>
               <%= link_to "Clases", events_path %>
