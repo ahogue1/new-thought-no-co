@@ -10,9 +10,8 @@
 </div>
 
   <div class="container">
-    <div class="navbar-sticky navbar-filters" style="justify-content: space-around; background-color: white; ">
-
-     <div class="sub-navbar-newthought-item hidden-md hidden-lg">
+    <div class="navbar-sticky navbar-filters">
+      <div class="sub-navbar-newthought-item hidden-md hidden-lg">
         <div class="dropdown">
           <i class="fa fa-bars dropdown-toggle" style="color: black;" data-toggle="dropdown"></i>
           <ul class="dropdown-menu">
@@ -34,12 +33,12 @@
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
 
-    <div class="row">
+    <div class="row pt" id="ministers">
       <div class="col-md-8 col-md-offset-2">
-        <h3 id="ministers">Ministers</h3>
+        <h3>Ministers</h3>
 
         <h4>SENIOR MINISTER – REVEREND BARBARA BUE</h4>
-       <p>
+        <p>
           Rev. Barb is passionate about personal transformation and the power of individuals to change their lives by changing their minds.  She is a dynamic speaker whose messages are clear and heart-warming – listeners exclaim in recognition, nod in agreement and feel things deeply.
         </p>
         <p>
@@ -76,15 +75,15 @@
       </div>
     </div>
 
-  <div id="practitioners" class="row">
+  <div id="practitioners" class="row pt">
     <div class="col-md-8 col-md-offset-2">
       <%= render 'practitioners' %>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row pt" id="core-council">
     <div class="col-md-8 col-md-offset-2">
-      <h3 id="core-council">Core Council</h3>
+      <h3>Core Council</h3>
       <p>
         Core Council is the name that we have given our Board of Trustees. They are responsible for overseeing the financial health and wellbeing of the Center. These are elected two-year positions. Current members are listed below.
       </p>
@@ -107,7 +106,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row pt" id="staff">
     <div class="col-md-8 col-md-offset-2">
       <%= render 'staff' %>
     </div>
