@@ -3,6 +3,8 @@ class PagesController < ApplicationController
   def about
   end
 
+  def be_of_service
+  end
 
   def blog
     @posts = BloggerService.new.get_posts
