@@ -1,2 +1,22 @@
-<h1>Blogs Page</h1>
-<%= @posts.first.title %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="banner" style="background-image: url(<%= image_path('rainbow-flower.jpg')%>);">
+
+      <div class="banner-heading">
+        <h1>Inspiration Blog</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+  <% @posts.each do |post| %>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h4><%= post.title %></h4>
+        <p><%= raw post.content %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
