@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="banner" style="background-image: url(<%= image_path('rainbow-flower.jpg')%>);">
+
+      <div class="banner-heading">
+        <h1>Be Connected</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <%= render(
+    'shared/secondary_navbar',
+    items: [
+      { url: '#classes', title: 'Classes' },
+      { url: '#events', title: 'Events' },
+      { url: '#groups', title: 'Groups' }
+    ])
+  %>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h3><%= @event.title %></h3>
+
+      <p>
+        <%= @event.schedule %>
+        <span>Price: <%= humanized_money_with_symbol(@event.general_price) %></span>
+      </p>
+      <p><%= @event.description %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h4>Register for <%= @event.title %></h4>
+      <%= simple_form_for @registration do |f| %>
+        <%= f.input :event_id, as: :hidden, input_html: { value: @event.id } %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :phone %>
+        <%= f.input :email %>
+        <%= f.input :comment %>
+        <%= f.submit "Register", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

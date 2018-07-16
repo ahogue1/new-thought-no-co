@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   resources :events, only: [:index, :show]
   resources :groups, only: [:index]
   resources :prayer_requests, only: [:new, :create, :edit]
+  resources :registrations, only: [:create]
 end
