@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="banner" style="background-image: url(<%= image_path('rainbow-flower.jpg')%>);">
+
+      <div class="banner-heading">
+        <h1>Be Connected</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <%= render(
+    'shared/secondary_navbar',
+    items: [
+      { url: '#classes', title: 'Classes' },
+      { url: '#events', title: 'Events' },
+      { url: '#groups', title: 'Groups' }
+    ])
+  %>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+  <h3>Upcoming Classes</h3>
+
+  <% @classes.each do |klass| %>
+    <div class="row">
+      <div class="col-md-8 col-md-8">
+        <h4>
+          <%= link_to klass.title, klass %>
+        </h4>
+        <p>
+          <%= klass.schedule %>
+          <span>Price: <%= humanized_money_with_symbol(klass.general_price) %></span>
+        </p>
+        <p><%= klass.description %></p>
+      </div>
+    </div>
+  <% end %>
+
+</div>

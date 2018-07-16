@@ -8,4 +8,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
+  def classes
+    @classes = Event.where(event_type: "class").where('end_date >= ?', Date.today)
+  end
 end
