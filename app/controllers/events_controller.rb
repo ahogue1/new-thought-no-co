@@ -1,11 +1,11 @@
 class EventsController < ApplicationController
 
   def index
-    @events = Event.all
+    @events = Event.where(event_type: "event").where('end_date >= ?', Date.today)
   end
 
   def show
-    @event = Event.find_by(slug: params[:id])
+    @event = Event.find(params[:id])
   end
 
 end

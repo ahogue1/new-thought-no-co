@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'venue', to: 'pages#venue'
   get 'youth', to: 'pages#youth'
 
-  resources :events, only: [:index]
+  resources :events, only: [:index, :show]
   resources :groups, only: [:index]
   resources :prayer_requests, only: [:new, :create, :edit]
 end

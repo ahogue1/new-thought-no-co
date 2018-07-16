@@ -1,1 +1,49 @@
-<h1>Events Index page</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="banner" style="background-image: url(<%= image_path('rainbow-flower.jpg')%>);">
+
+      <div class="banner-heading">
+        <h1>Be Connected</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="navbar-sticky navbar-filters">
+    <div class="sub-navbar-newthought-item hidden-md hidden-lg">
+      <div class="dropdown">
+        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+        <ul class="dropdown-menu">
+          <li><a href="#outreach">Classes</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#groups">Groups</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <a href="#classes" class="hidden-xs hidden-sm"><h4>Classes</h4></a>
+    <a href="#events" class="hidden-xs hidden-sm"><h4>Events</h4></a>
+    <a href="#volunteering" class="hidden-xs hidden-sm"><h4>Volunteering</h4></a>
+  </div>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+  <h3>Upcoming Events</h3>
+
+  <% @events.each do |event| %>
+    <div class="row">
+      <div class="col-md-8 col-md-8">
+        <h4>
+          <%= link_to event.title, event %>
+        </h4>
+        <p>
+          <%= event.schedule %>
+          <span>Price: <%= humanized_money_with_symbol(event.general_price) %></span>
+        </p>
+        <p><%= event.description %></p>
+      </div>
+    </div>
+  <% end %>
+
+</div>
