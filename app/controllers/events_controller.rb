@@ -20,6 +20,7 @@ class EventsController < ApplicationController
     if @registration.save
       redirect_to events_path, notice: "Registration Completed"
     else
+      flash.now[:alert] = "Registration Couldn't be completed, please check errors below"
       render :show
     end
 

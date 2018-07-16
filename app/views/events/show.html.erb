@@ -35,14 +35,14 @@
 
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <h4>Register for <%= @event.title %></h4>
+      <h4 id="registration-form">Register for <%= @event.title %></h4>
       <%= simple_form_for @registration do |f| %>
         <%= f.input :event_id, as: :hidden, input_html: { value: @event.id } %>
         <%= f.input :first_name %>
         <%= f.input :last_name %>
         <%= f.input :phone %>
         <%= f.input :email %>
-        <%= f.input :comment %>
+        <%= f.input :comment, label: "Additional Information" %>
         <%= f.submit "Register", class: "btn btn-primary" %>
       <% end %>
     </div>
