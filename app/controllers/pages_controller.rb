@@ -14,7 +14,11 @@ class PagesController < ApplicationController
   end
 
   def home
-    @event = Event.last
+    @event = Event.
+      where(event_type: "event").
+      where('start_date >= ?', Date.today).
+      order(:start_date).
+      first
   end
 
   def who_we_are
