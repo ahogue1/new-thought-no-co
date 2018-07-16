@@ -10,22 +10,14 @@
 </div>
 
 <div class="container">
-  <div class="navbar-sticky navbar-filters">
-    <div class="sub-navbar-newthought-item hidden-md hidden-lg">
-      <div class="dropdown">
-        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-        <ul class="dropdown-menu">
-          <li><a href="#outreach">Classes</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#groups">Groups</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <a href="#classes" class="hidden-xs hidden-sm"><h4>Classes</h4></a>
-    <a href="#events" class="hidden-xs hidden-sm"><h4>Events</h4></a>
-    <a href="#volunteering" class="hidden-xs hidden-sm"><h4>Volunteering</h4></a>
-  </div>
+  <%= render(
+    'shared/secondary_navbar',
+    items: [
+      { url: '#classes', title: 'Classes' },
+      { url: '#events', title: 'Events' },
+      { url: '#groups', title: 'Groups' }
+    ])
+  %>
 
   <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
 
