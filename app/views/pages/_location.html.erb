@@ -2,11 +2,6 @@
   <div class="location-container">
 
     <div class="location-box">
-      <div class="location-service-times">
-        <h6>SUNDAY SERVICE 10 – 11:15</h6>
-        <%= image_tag "service_photo.jpg", class: "service-photo" %>
-      </div>
-
       <div class="find-us-box">
         <h6>FIND US</h6>
 
@@ -24,9 +19,13 @@
         </div>
         <p>In The Outlets At Loveland, South Section</p>
       </div>
-    </div>
 
+      <div class="location-service-times">
+        <h6>SUNDAY SERVICE 10 – 11:15</h6>
+        <%= image_tag "service_photo.jpg", class: "service-photo" %>
+      </div>
 
+      <%= render 'newsletter_form' %>
     </div>
 
   </div>
