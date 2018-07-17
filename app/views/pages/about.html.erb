@@ -9,22 +9,14 @@
   </div>
 </div>
 <div class="container">
-  <div class="navbar-sticky navbar-filters">
-    <div class="sub-navbar-newthought-item hidden-md hidden-lg">
-      <div class="dropdown">
-        <i class="fa fa-bars dropdown-toggle" style="color: black;" data-toggle="dropdown"></i>
-        <ul class="dropdown-menu">
-          <li><a href="#our-service" style="font-size: 14px;">Our Service</a></li>
-          <li><a href="#mission-vision" style="font-size: 14px;">What is New Thought?</a></li>
-          <li><a href="#what-is-nt" style="font-size: 14px;">What Is New Thought</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <a href="#our-service" class="hidden-xs hidden-sm"><h4>Our Service</h4></a>
-    <a href="#mission-vision" class="hidden-xs hidden-sm"><h4>Mission and Vision</h4></a>
-    <a href="#what-is-nt" class="hidden-xs hidden-sm"><h4>What is New Thought</h4></a>
-  </div>
+  <%= render(
+    'shared/secondary_navbar',
+    items: [
+      { url: '#our-service', title: 'Our Service' },
+      { url: '#mission-vision', title: 'Mission and Vision' },
+      { url: '#what-is-nt', title: 'What is New Thought?' }
+    ])
+  %>
 
   <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
 
