@@ -1,1 +1,40 @@
-<h1>Group index page</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="banner" style="background-image: url(<%= image_path('rainbow-flower.jpg')%>);">
+
+      <div class="banner-heading">
+        <h1>Be Connected</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <%= render(
+    'shared/secondary_navbar',
+    items: [
+      { url: classes_path, title: 'Classes' },
+      { url: events_path, title: 'Events' },
+      { url: groups_path, title: 'Groups' }
+    ])
+  %>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+
+  <h3>Groups</h3>
+
+  <% @groups.each do |group| %>
+    <div class="row">
+      <div class="col-md-8 col-md-8">
+        <h4>
+          <%= group.name %>
+        </h4>
+        <p>
+          <%= group.schedule %>
+        </p>
+        <p><%= group.description %></p>
+      </div>
+    </div>
+  <% end %>
+
+</div>

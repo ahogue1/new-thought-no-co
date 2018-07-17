@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get 'blog', to: 'pages#blog'
   get 'be-of-service', to:'pages#be_of_service'
   get 'classes', to: 'events#classes'
-  get 'groups', to: 'pages#groups'
   get 'give', to: 'pages#give'
   post 'registrations', to: 'events#create_registration'
   get 'venue', to: 'pages#venue'
