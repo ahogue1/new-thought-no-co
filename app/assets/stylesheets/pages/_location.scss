@@ -1,6 +1,6 @@
 .location {
   background: black;
-  height: 423px;
+  height: 480px;
   padding: 50px 57px;
   color: rgba(0,0,0,0.3);
 }
@@ -8,13 +8,13 @@
 .location-box{
   display: flex;
   justify-content: space-around;
-  width: 1166px;
   margin: 0 auto;
 }
 
 .find-us-box{
   h6{
-  padding-bottom: 32px;
+  padding: 32px 0;
+  margin: 0;
  }
 }
 
@@ -48,7 +48,7 @@
   display: flex;
   justify-content: space-between;
   margin: 25px 0 33px;
-  width: 390px;
+  width: 349px;
 }
 
 .location-contact{
@@ -69,11 +69,42 @@
 
 .location-service-times{
   padding-bottom: 20px;
-  h6{
-    padding-bottom: 26px;
+  // text-align: center;
+  img{
+    margin-bottom: 26px;
   }
 }
 
 .service-photo{
   width: 325px;
+}
+
+//------------Newletter form
+
+#mc_embed_signup{
+  width: 381px;
+  label{ color: $blue; }
+}
+
+.mc-field-names{
+  display: flex;
+
+  input{ color: black; }
+  .mc-field-group{
+    margin: 23px 43px 35px 0;
+    width: 44%;
+  }
+}
+
+.mc-field-group{
+  display: flex;
+  flex-direction: column;
+}
+
+#mce-EMAIL{
+  margin-bottom: 34px;
+}
+
+#mc-embed-subscribe{
+
 }
