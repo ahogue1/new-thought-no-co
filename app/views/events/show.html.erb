@@ -38,11 +38,15 @@
       <h4 id="registration-form">Register for <%= @event.title %></h4>
       <%= simple_form_for @registration do |f| %>
         <%= f.input :event_id, as: :hidden, input_html: { value: @event.id } %>
-        <%= f.input :first_name %>
-        <%= f.input :last_name %>
-        <%= f.input :phone %>
-        <%= f.input :email %>
-        <%= f.input :comment, label: "Additional Information" %>
+        <div class="flex-sb">
+          <%= f.input :first_name %>
+          <%= f.input :last_name %>
+        </div>
+        <div class="flex-sb">
+          <%= f.input :phone %>
+          <%= f.input :email %>
+        </div>
+        <%= f.input :comment, label: "Comments:" %>
 
         <article>
           <label class="amount">
