@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180718184131) do
+ActiveRecord::Schema.define(version: 20180719162719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20180718184131) do
     t.integer "amount_cents", default: 0, null: false
     t.string "state"
     t.jsonb "payment"
+    t.string "breeze_payment_id"
     t.index ["event_id"], name: "index_registrations_on_event_id"
     t.index ["user_id"], name: "index_registrations_on_user_id"
   end
