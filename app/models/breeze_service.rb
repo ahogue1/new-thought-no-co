@@ -5,13 +5,13 @@ class BreezeService
   headers 'Api-Key' => ENV['BREEZE_KEY']
   format :json
 
-  def add_contribution(data, registration)
+  def add_contribution(data)
     response = self.class.get(
       "/giving/add",
       query: {
         date: data[:date],
         person_json: data[:person].to_json,
-        uid: registration.id,
+        uid: data[:uid],
         processor: 'Stripe',
         method: 'Credit/Debit Online',
         funds_json: [data[:fund]].to_json,
@@ -21,11 +21,7 @@ class BreezeService
       }
     )
 
-    if response['success']
-      return registration.update(breeze_payment_id: response['payment_id'])
-    else
-      return response['errors']
-    end
+    return response
   end
 
 end

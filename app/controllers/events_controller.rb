@@ -34,6 +34,25 @@ class EventsController < ApplicationController
     @registration.state = 'paid'
 
     if @registration.save
+      breeze = BreezeService.new
+      response = breeze.add_contribution({
+        date: Date.today.strftime('%d-%m-%Y'),
+        person: {
+          name: "#{@registration.first_name} #{@registration.last_name}",
+          email: @registration.email
+        },
+        uid: @registration.id,
+        fund: {
+          id: "446731",
+          name: "Class - Default",
+          amount: @registration.amount.to_s
+        },
+        amount: @registration.amount.to_s,
+        note: "#{@event.title} #{@event.event_type.capitalize} Payment"
+      })
+
+      @registration.update(breeze_payment_id: response['payment_id'])
+
       redirect_to events_path, notice: "Registration Completed"
     else
       flash.now[:alert] = "Registration Couldn't be completed, please check errors below"
