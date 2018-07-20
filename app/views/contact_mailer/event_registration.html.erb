@@ -1,0 +1,6 @@
+<h1>New <%= @event.event_type.capitalize %> Request</h1>
+
+<p><%= @registration.first_name %></p>
+<p><%= @registration.state %></p>
+<p><%= humanized_money_with_symbol(@registration.amount) %></p>
+<p><%= @registration.breeze_payment_id %></p>

@@ -15,7 +15,7 @@ class EventsController < ApplicationController
 
   def create_registration
     @registration = Registration.new(registration_params)
-    @event = Event.find(params[:registration][:event_id])
+    @event = @registration.event
     @registration.amount = @event.general_price
 
     customer = Stripe::Customer.create(
@@ -52,6 +52,7 @@ class EventsController < ApplicationController
       })
 
       @registration.update(breeze_payment_id: response['payment_id'])
+      ContactMailer.event_registration(@registration).deliver_now
 
       redirect_to "/#{@event.event_type.pluralize}", notice: "Registration Completed"
     else

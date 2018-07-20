@@ -9,4 +9,10 @@ class ContactMailer < ApplicationMailer
     @request = request
     mail(to: "hogue.a@gmail.com", subject: "New Prayer Request")
   end
+
+  def event_registration(registration)
+    @registration = registration
+    @event = registration.event
+    mail(to: "hogue.a@gmail.com", subject: "New #{@event.event_type.capitalize} Registration")
+  end
 end
