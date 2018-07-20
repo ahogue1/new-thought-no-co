@@ -16,11 +16,10 @@ class EventsController < ApplicationController
   def create_registration
     @registration = Registration.new(registration_params)
     @event = @registration.event
-    @registration.amount = @event.general_price
 
     customer = Stripe::Customer.create(
-      source: params[:stripeToken],
-      email:  params[:stripeEmail]
+      source: params[:registration][:stripeToken],
+      email:  params[:registration][:stripeEmail]
     )
 
     charge = Stripe::Charge.create(
@@ -56,19 +55,19 @@ class EventsController < ApplicationController
 
       redirect_to "/#{@event.event_type.pluralize}", notice: "Registration Completed"
     else
-      flash.now[:alert] = "Registration Couldn't be completed, please check errors below"
+      flash.now[:alert] = "Registration couldn't be completed, please check errors below"
       render :show
     end
 
   rescue Stripe::CardError => e
-    flash.now[:alert] = "Registration Couldn't be completed, please check errors below"
+    flash.now[:alert] = "Unable to process payment, please try again"
     render :show
   end
 
   private
 
   def registration_params
-    params.require(:registration).permit(:first_name, :last_name, :email, :phone, :comment, :event_id)
+    params.require(:registration).permit(:first_name, :last_name, :email, :phone, :comment, :event_id, :amount_cents, :stripeToken, :stripeEmail)
   end
 
 end

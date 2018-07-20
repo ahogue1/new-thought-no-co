@@ -4,5 +4,7 @@ class Registration < ApplicationRecord
 
   validates :first_name, :last_name, :email, :phone, presence: true
 
+  attr_accessor :stripeToken, :stripeEmail
+
   monetize :amount_cents
 end

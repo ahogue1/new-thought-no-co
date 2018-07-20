@@ -49,19 +49,52 @@
         <%= f.input :comment, label: "Comments:" %>
 
         <article>
-          <label class="amount">
-            <span>Amount: <%= humanized_money_with_symbol(@event.general_price) %></span>
-          </label>
+          <%= f.input :amount_cents, label: "Amount", collection: @event.prices_collection, selected: @event.general_price_cents %>
         </article>
 
-        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-name="Class Payment"
-          data-description="Class <%= @event.title %>"
-          data-amount="<%= @event.general_price_cents %>"
-          data-currency="<%= @event.general_price.currency %>">
-          </script>
+        <article>
+          <%= f.input :stripeEmail, as: :hidden %>
+        </article>
+
+        <article>
+          <%= f.input :stripeToken, as: :hidden %>
+        </article>
+
+        <%= f.submit 'Pay & Complete Registration', class: 'btn btn-primary', id: 'submit_registration' %>
       <% end %>
+
+      <script src="https://checkout.stripe.com/checkout.js"></script>
+
+      <script>
+        var handler = StripeCheckout.configure({
+          key: '<%= Rails.configuration.stripe[:publishable_key] %>',
+          locale: 'auto',
+          name: '<%= @event.event_type.capitalize %> Payment',
+          description: '<%= "#{@event.event_type.capitalize} #{@event.title}" %>',
+          token: function(token) {
+            document.getElementById('registration_stripeToken').value = token.id;
+            document.getElementById('registration_stripeEmail').value = token.email;
+
+            document.getElementById('new_registration').submit();
+          }
+        });
+
+        document.getElementById('submit_registration').addEventListener('click', function(e) {
+          e.preventDefault();
+
+          var amount = document.getElementById('registration_amount_cents').value;
+          amount = parseFloat(amount);
+
+          handler.open({
+            amount: amount
+          });
+        });
+
+        window.addEventListener('popstate', function() {
+          handler.close();
+        });
+      </script>
+
     </div>
   </div>
 </div>
