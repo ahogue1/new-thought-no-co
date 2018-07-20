@@ -53,7 +53,7 @@ class EventsController < ApplicationController
 
       @registration.update(breeze_payment_id: response['payment_id'])
 
-      redirect_to events_path, notice: "Registration Completed"
+      redirect_to "/#{@event.event_type.pluralize}", notice: "Registration Completed"
     else
       flash.now[:alert] = "Registration Couldn't be completed, please check errors below"
       render :show
