@@ -21,21 +21,23 @@
 
   <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
 
-  <h3>Upcoming Classes</h3>
+  <div class="event-container">
+    <h3>Upcoming Classes</h3>
 
-  <% @classes.each do |klass| %>
-    <div class="row">
-      <div class="col-md-8 col-md-8">
-        <h4>
-          <%= link_to klass.title, klass %>
-        </h4>
-        <p>
-          <%= klass.schedule %>
-          <span>Price: <%= humanized_money_with_symbol(klass.general_price) %></span>
-        </p>
-        <p><%= klass.description %></p>
+    <% @classes.each do |klass| %>
+      <div class="row">
+        <div class="col-md-8 col-md-8">
+          <h4>
+            <%= link_to klass.title, klass %>
+          </h4>
+          <p>
+            <%= klass.schedule %>
+            <span>Price: <%= humanized_money_with_symbol(klass.general_price) %></span>
+          </p>
+          <p><%= klass.description %></p>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
 
+  </div>
 </div>
