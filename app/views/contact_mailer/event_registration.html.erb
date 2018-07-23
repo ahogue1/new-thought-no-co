@@ -1,6 +1,17 @@
-<h1>New <%= @event.event_type.capitalize %> Request</h1>
+<h1>Online <%= @event.event_type.capitalize %> Registration</h1>
 
-<p><%= @registration.first_name %></p>
-<p><%= @registration.state %></p>
-<p><%= humanized_money_with_symbol(@registration.amount) %></p>
-<p><%= @registration.breeze_payment_id %></p>
+<p>You've received a new registartion through the New Thought NoCo website:</p>
+<p>Name: <%= "#{@registration.first_name.capitalize} #{@registration.last_name.capitalize}" %> </p>
+<p>Email: <%= @registration.email %>  Phone: <%= @registration.phone %></p>
+
+<p>Payment Status: <%= @registration.state.upcase %></p>
+<p><%= @event.event_type.capitalize %>: <%= @event.title.titleize %></p>
+<p>Date: <%= @event.start_date %> - Facilitator: <%= @event.facilitator %></p>
+
+<p>Amount Paid: <%= humanized_money_with_symbol(@registration.amount) %></p>
+<p>Breeze Payment Id: <%= @registration.breeze_payment_id %></p>
+
+<% unless @registration.comment.empty? %>
+  <p>Comments from <%= @registration.first_name %>:</p>
+  <p><%= @registration.comment %></p>
+<% end %>
