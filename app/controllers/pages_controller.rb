@@ -10,6 +10,9 @@ class PagesController < ApplicationController
     @posts = BloggerService.new.get_posts
   end
 
+  def calendar
+  end
+
   def give
   end
 
