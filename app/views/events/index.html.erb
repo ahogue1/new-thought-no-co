@@ -36,6 +36,7 @@
             <span>Price: <%= humanized_money_with_symbol(event.general_price) %></span>
           </p>
           <p><%= event.description %></p>
+          <%= link_to 'Register', event, class: "btn btn-primary" %>
         </div>
       </div>
     <% end %>

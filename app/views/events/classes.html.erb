@@ -36,6 +36,7 @@
             <span>Price: <%= humanized_money_with_symbol(klass.general_price) %></span>
           </p>
           <p><%= klass.description %></p>
+          <%= link_to 'Register', klass, class: "btn btn-primary" %>
         </div>
       </div>
     <% end %>
