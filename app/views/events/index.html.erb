@@ -23,11 +23,13 @@
   <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
 
 <div class="event-container">
-    <h3>Upcoming Events</h3>
+  <div class="col-md-6 col-md-offset-4">
+    <h2>Upcoming Events</h2>
+  </div>
 
     <% @events.each do |event| %>
       <div class="row">
-        <div class="col-md-8 col-md-8">
+        <div class="col-md-8 col-md-offset-1 pt">
           <h4>
             <%= link_to event.title, event %>
           </h4>
