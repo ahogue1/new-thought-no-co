@@ -3,3 +3,17 @@
 
   h3 { margin-top: 0; }
 }
+
+.img-accordion {
+  float: left;
+  margin-right: 15px;
+  width: 200px;
+}
+
+@media screen and (max-width: 450px) {
+  .img-accordion {
+    margin-bottom: 10px;
+    margin-right: 0;
+    width: 100%;
+  }
+}
