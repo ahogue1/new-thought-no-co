@@ -1,10 +1,8 @@
-<div class="container">
+<div class="container prayer-container">
   <div class="row">
-    <div class="col-xs-8 col-md-offset-2">
       <h1>Send Us A Prayer Request</h1>
-    </div>
 
-    <div class="col-xs-8 col-md-offset-2">
+    <div class="col-md-6 col-md-offset-3">
       <p>
         The only required field in this form is the prayer request itself, the other fields are there if you would like to provide that information. Anything submitted from this page will be sent directly to the New Thought Northern Colorado prayer team and will remain confidential.
       </p>
@@ -12,7 +10,7 @@
   </div>
 
   <div class="row">
-    <div class="col-xs-6 col-md-offset-3">
+    <div class="col-md-6 col-md-offset-3">
       <%= simple_form_for(@prayer_request) do |f| %>
         <%= f.input :name, label: "Your Name:" %>
         <%= f.input :method, label: "How would you like to receive your prayer?", collection: PrayerRequest.options, include_blank: "Select an option" %>
