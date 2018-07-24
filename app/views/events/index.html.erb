@@ -22,25 +22,35 @@
 
   <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
 
-<div class="event-container">
-  <div class="col-md-6 col-md-offset-4">
-    <h2>Upcoming Events</h2>
+<% if @events.empty? %>
+  <div class="event-container">
+    <div class="col-md-9 col-md-offset-1">
+      <h2 class ="pt">We dont' have any upcoming events at this time,</h2>
+      <h2> but check back soon!</h2>
+    </div>
   </div>
+<% else %>
 
-    <% @events.each do |event| %>
-      <div class="row">
-        <div class="col-md-8 col-md-offset-1 pt">
-          <h4>
-            <%= link_to event.title, event %>
-          </h4>
-          <p>
-            <%= event.schedule %>
-            <span>Price: <%= humanized_money_with_symbol(event.general_price) %></span>
-          </p>
-          <p><%= event.description %></p>
-          <%= link_to 'Register', event, class: "btn btn-primary" %>
+  <div class="event-container">
+    <div class="col-md-6 col-md-offset-4">
+        <h2>Upcoming Events</h2>
+    </div>
+
+      <% @events.each do |event| %>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-1 pt">
+            <h4>
+              <%= link_to event.title, event %>
+            </h4>
+            <p>
+              <%= event.schedule %>
+              <span>Price: <%= humanized_money_with_symbol(event.general_price) %></span>
+            </p>
+            <p><%= event.description %></p>
+            <%= link_to 'Register', event, class: "btn btn-primary" %>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>

@@ -22,26 +22,34 @@
 
   <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
 
-  <div class="event-container">
-    <div class="col-md-6 col-md-offset-4">
-      <h2>Upcoming Classes</h2>
-    </div>
-
-    <% @classes.each do |klass| %>
-      <div class="row">
-        <div class="col-md-8 col-md-offset-1 pt">
-          <h4>
-            <%= link_to klass.title, klass %>
-          </h4>
-          <p>
-            <%= klass.schedule %>
-            <span>Price: <%= humanized_money_with_symbol(klass.general_price) %></span>
-          </p>
-          <p><%= klass.description %></p>
-          <%= link_to 'Register', klass, class: "btn btn-primary" %>
-        </div>
+  <% if @classes.empty? %>
+    <div class="event-container">
+      <div class="col-md-9 col-md-offset-1">
+        <h2 class ="pt">We dont' have any upcoming classes at this time,</h2>
+        <h2> but check back soon!</h2>
       </div>
-    <% end %>
+    </div>
+  <% else %>
+    <div class="event-container">
+      <div class="col-md-6 col-md-offset-4">
+        <h2>Upcoming Classes</h2>
+      </div>
 
+      <% @classes.each do |klass| %>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-1 pt">
+            <h4>
+              <%= link_to klass.title, klass %>
+            </h4>
+            <p>
+              <%= klass.schedule %>
+              <span>Price: <%= humanized_money_with_symbol(klass.general_price) %></span>
+            </p>
+            <p><%= klass.description %></p>
+            <%= link_to 'Register', klass, class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
