@@ -3,24 +3,29 @@
   <h3>Recent Talks from New Thought NoCo</h3>
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#talks-tab" aria-controls="talks-tab" role="tab" data-toggle="tab"><i class="fa fa-soundcloud" aria-hidden="true"></i>  Listen to with SoundCloud</a></li>
-    <li role="presentation"><a href="#videos-tab" aria-controls="videos-tab" role="tab" data-toggle="tab"><i class="fa fa-youtube-play"></i>  Watch with YouTube </a></li>
+    <li role="presentation" class="active">
+      <a href="#talks-tab" aria-controls="talks-tab" role="tab" data-toggle="tab">
+      <i class="fa fa-soundcloud media-container-soundcloud-text" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li role="presentation">
+      <a href="#videos-tab" aria-controls="videos-tab" role="tab" data-toggle="tab">
+        <i class="fa fa-youtube-play media-container-youtube-text"></i>
+      </a>
+    </li>
   </ul>
 
   <!-- Tab panes -->
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane fade in active" id="talks-tab">
-      <div class="fluid-conatiner">
-        <div class="row">
-          <div class="sound-cloud" id="talks">
-            <iframe width="500px" height="350" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/540141864&color=%233691c5&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"></iframe>
-          </div>
-        </div>
+      <div class="sound-cloud embed-responsive embed-responsive-16by9" id="talks">
+        <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/540141864&color=%233691c5&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"></iframe>
       </div>
     </div>
+
     <div role="tabpanel" class="tab-pane fade" id="videos-tab">
-      <div class= "recent-talks-video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/sFOEIDVLjtw?rel=0&list=PL9AC5DC5BB4073252" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <div class= "recent-talks-video embed-responsive embed-responsive-16by9">
+        <iframe src="https://www.youtube.com/embed/sFOEIDVLjtw?rel=0&list=PL9AC5DC5BB4073252" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
   </div>

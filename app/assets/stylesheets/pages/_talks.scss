@@ -1,14 +1,13 @@
-.media-container{
-  width: 700px;
-  height: 582px;
+.media-container {
+  max-width: 600px;
   margin: 127px auto;
 }
 
-.nav-tabs{
+.nav-tabs {
   margin: 45px 0;
 }
 
-.sound-cloud{
+.sound-cloud {
   margin: 50px;
   text-align: center;
   h3{
@@ -16,8 +15,31 @@
   }
 }
 
-.recent-talks-video{
-  margin: 50px 0;
+.recent-talks-video {
+  margin: 50px;
   text-align: center;
 }
 
+.media-container-soundcloud-text:after {
+  content: '  Listen with SoundCloud';
+  font-family: $body-font;
+}
+
+.media-container-youtube-text:after {
+  content: '  Watch with YouTube';
+  font-family: $body-font;
+}
+
+@media screen and (max-width: 500px) {
+  .media-container {
+    margin: 87px auto;
+  }
+
+  .media-container-soundcloud-text:after {
+    content: '  Listen';
+  }
+
+  .media-container-youtube-text:after {
+    content: '  Watch';
+  }
+}
