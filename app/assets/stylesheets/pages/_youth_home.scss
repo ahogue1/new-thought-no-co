@@ -1,5 +1,4 @@
 .youth-section-home-container{
-  height: 600px;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -11,16 +10,33 @@
 
 .youth-section-row{
   margin-top: 60px;
-  width: 760px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 28px 84px 58px;
   background: rgba(0, 0, 0, 0.65);
-  p{ padding: 32px 0;}
-
+  p { padding: 32px 0; }
 }
 
 .youth-button{
   border-radius: 5px;
   padding: 9px 21px;
   margin-top: 18px;
+}
+
+@media screen and (max-width: 700px) {
+  .youth-section-home-container {
+    padding: 80px 23px;
+  }
+
+  .youth-section-row {
+    padding: 28px 30px 58px;
+
+    p { padding: 10px 0; }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .youth-section-row {
+    p { font-size: 16px; }
+  }
 }
