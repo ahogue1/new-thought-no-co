@@ -1,26 +1,27 @@
 .location {
   background: black;
-  height: 480px;
   padding: 50px 57px;
   color: rgba(0,0,0,0.3);
 }
 
-.location-box{
+.location-box {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
+  text-align: center;
 }
 
-.find-us-box{
-  h6{
-  padding: 32px 0;
-  margin: 0;
- }
+.find-us-box {
+  h6 {
+    padding: 32px 0;
+    margin: 0;
+  }
 }
 
 .location-links {
   align-items: center;
 }
+
 .location-links a {
   color: white;
   text-decoration: none;
@@ -31,80 +32,113 @@
   opacity: 1;
 }
 
-.location-container{
+.location-container {
   color: white;
-  justify-content: space-evenly;
   padding: 0 35px;
-  h6{
+
+  h6 {
     color: $blue;
     font-size: 32px;
   }
-  p{
+  p {
     font-size: 15px;
   }
 }
 
-.location-address{
-  display: flex;
-  justify-content: space-between;
+.location-address {
+  display: inline-flex;
   margin: 25px 0 33px;
-  width: 349px;
 }
 
-.location-contact{
+.location-sanctuary {
+  margin-right: 50px;
+}
+
+.location-contact {
   vertical-align: top;
   text-align: center;
   height: 200px;
   margin: 52px 0 0;
-  a{
+  a {
     color: white;
     font-size: 15px;
   }
-  h6{ color: $blue; }
+  h6 { color: $blue; }
 }
 
-.location-phone{
+.location-phone {
   margin: 23px 0;
 }
 
-.location-service-times{
+.location-service-times {
   padding-bottom: 20px;
   // text-align: center;
-  img{
+  img {
     margin-bottom: 26px;
   }
 }
 
-.service-photo{
-  width: 325px;
-}
-
 //------------Newletter form
 
-#mc_embed_signup{
-  width: 381px;
-  label{ color: $blue; }
+#mc_embed_signup {
+  max-width: 381px;
+  label { color: $blue; }
 }
 
-.mc-field-names{
+.mc-field-names {
   display: flex;
 
-  input{ color: black; }
-  .mc-field-group{
+  input { color: black; }
+  .mc-field-group {
     margin: 23px 43px 35px 0;
     width: 44%;
   }
 }
 
-.mc-field-group{
+.mc-field-group {
   display: flex;
   flex-direction: column;
 }
 
-#mce-EMAIL{
+#mce-EMAIL {
   margin-bottom: 34px;
 }
 
-#mc-embed-subscribe{
+@media screen and (max-width: 920px) {
+  .location-box {
+    display: block;
+  }
 
+  #mc_embed_signup {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .location-address {
+    display: block;
+    margin: 0;
+  }
+
+  .location-sanctuary {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .location {
+    padding: 30px 20px;
+  }
+
+  .location-container h6 {
+    padding: 15px 0;
+    font-size: 23px;
+  }
+
+  .mc-field-names {
+    display: block;
+  }
+
+  .mc-field-names .mc-field-group{
+    width: 100%;
+  }
 }
