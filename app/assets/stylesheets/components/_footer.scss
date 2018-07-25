@@ -15,6 +15,10 @@
  }
 }
 
+.footer-links {
+  width: 100%;
+}
+
 .footer-contact{
   display: flex;
 }
@@ -27,8 +31,6 @@
 
 .footer {
   background: black;
-  display: flex;
-  height: 155px;
   padding: 23px 70px;
   color: white;
   margin-top: -6px;
@@ -43,14 +45,19 @@
   margin: 10px 0;
 }
 
-.footer-links a:hover {
+.footer a:hover, .footer a:focus {
   color: $blue;
   text-decoration: none;
 }
 
+.footer-admin{
+  margin-left: auto;
+}
+
 .yam-footer{
-  display: flex;
-  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.53);
+  padding-top: 5px;
+  margin-top: 5px;
   img{ height: 30px;}
 }
 
