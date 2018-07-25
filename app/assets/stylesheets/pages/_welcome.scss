@@ -4,12 +4,19 @@
 }
 
 .welcome-video{
-  margin: 65px 0;
+  margin: 65px auto;
+  max-width: 600px;
   h3{ margin-bottom: 40px}
 }
 
 .mission-vision{
-  width: 800px;
-  margin: 100px auto;
+  max-width: 800px;
+  margin: 0 auto 100px;
   p { margin-top: 36px; }
+}
+
+@media screen and (min-width: 750px) {
+  .welcome-video {
+    padding-bottom: 350px;
+  }
 }
