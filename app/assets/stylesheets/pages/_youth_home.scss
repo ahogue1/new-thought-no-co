@@ -25,6 +25,7 @@
 
 @media screen and (max-width: 700px) {
   .youth-section-home-container {
+    background-attachment: unset;
     padding: 36px 23px;
   }
 
@@ -38,9 +39,5 @@
 @media screen and (max-width: 500px) {
   .youth-section-row {
     p { font-size: 16px; }
-  }
-
-  .youth-section-home-container{
-    background-attachment: unset;
   }
 }
