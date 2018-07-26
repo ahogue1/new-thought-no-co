@@ -4,3 +4,14 @@
     margin-bottom: 40px;
   }
 }
+
+#donate-heading{
+  text-align: left;
+  margin: 139px 29%;
+}
+
+@media screen and (max-width: 625px) {
+  #donate-heading{
+    margin: 178px 16%;
+  }
+}
