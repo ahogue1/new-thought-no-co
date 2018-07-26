@@ -19,8 +19,18 @@
   .welcome-video {
     padding-bottom: 350px;
   }
+}
 
+@media screen and (max-width: 500px) {
   .mission-vision{
     margin: 0 auto 40px;
+  }
+
+  .welcome-section {
+    margin: 40px 17px;
+  }
+
+  .welcome-video{
+    margin: 37px auto;
   }
 }
