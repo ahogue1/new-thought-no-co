@@ -125,6 +125,16 @@
   h4{ font-size: 18px;}
 }
 
+.navbar-ntnoco-dropdown-menu li > a.dropdown-btn {
+  background: $blue;
+  color: white !important;
+  border-radius: 6px;
+
+  &:hover {
+    background: #26729e !important;
+  }
+}
+
 @media screen and (min-width: 992px) and (max-width: 1203px) {
   .navbar-ntnoco {
     padding: 0px 10px;
