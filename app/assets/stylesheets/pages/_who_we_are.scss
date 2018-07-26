@@ -16,8 +16,22 @@
 
 @media screen and (max-width: 450px) {
   .img-accordion {
-    margin-bottom: 10px;
-    margin-right: 0;
+    margin: 0 auto 10px;
+    display: block;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #core-council ul {
+    list-style: none;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 767px) {
+  .img-responsive {
+    margin: 9px auto;
     width: 100%;
+    max-width: 320px;
   }
 }
