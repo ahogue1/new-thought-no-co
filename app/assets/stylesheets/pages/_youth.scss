@@ -1,0 +1,13 @@
+.img-youth-staff {
+  float: left;
+  margin-right: 15px;
+  width: 200px;
+}
+
+@media screen and (max-width: 650px) {
+  .img-youth-staff {
+    margin: 0 auto 10px;
+    display: block;
+    float: none;
+  }
+}
