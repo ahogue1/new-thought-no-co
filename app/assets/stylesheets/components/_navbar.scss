@@ -7,6 +7,7 @@
   padding: 0px 30px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 /* Logo */
@@ -25,13 +26,12 @@
 .navbar-ntnoco-links {
   display: flex;
   align-items: center;
-  padding-left: 120px;
 }
 
 /* Basic navbar item */
 .navbar-ntnoco-item {
   cursor: pointer;
-  padding: 0 27px;
+  padding: 0 20px;
 }
 
 /* Navbar link */
@@ -79,14 +79,13 @@
   border-top: 1px solid #E6E6E6;
 }
 
-.caret{
+.caret {
   display: inline-block;
   width: 0;
   height: 0;
   margin-left: 2px;
   vertical-align: middle;
-  border-top: 4px dashed;
-  border-top: 4px solid\9;
+  border-top: 4px solid;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
@@ -94,6 +93,22 @@
 .donate-btn{
   padding: 9px 25px 0px;
   margin-left: 50px;
+}
+
+// Small Screen Navbar
+.navbar-mobile-dropdown {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  left: 18%;
+  margin-top: -1px;
+  top: 100%;
 }
 
 // Sub navbar
@@ -108,4 +123,26 @@
   justify-content: space-around;
   a{ font-size: 14px; }
   h4{ font-size: 18px;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1203px) {
+  .navbar-ntnoco {
+    padding: 0px 10px;
+  }
+
+  .navbar-ntnoco-item {
+    padding: 0 11px;
+  }
+
+  .donate-btn {
+    padding: 9px 14px 0px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .dropdown-submenu .dropdown-menu {
+    left: 100%;
+    top: 0;
+  }
 }
