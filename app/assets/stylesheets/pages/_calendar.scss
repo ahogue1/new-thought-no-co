@@ -1,4 +1,9 @@
-.calendar-heading{
+.calendar-heading {
   text-align: center;
   margin: 40px 0;
+}
+
+.calendar-box {
+  overflow-x: auto;
+  width: 100%;
 }
