@@ -3,3 +3,9 @@
   p{ margin-top: 20px; }
   h4{ margin-top: 24px; }
 }
+
+@media screen and (max-width: 767px) {
+  #ways-to-give ul {
+    list-style: none;
+  }
+}
