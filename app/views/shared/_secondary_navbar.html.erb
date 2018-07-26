@@ -1,22 +1,6 @@
 <div class="navbar-sticky navbar-filters">
-
-  <div class="sub-navbar-newthought-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-
-      <ul class="dropdown-menu">
-
-        <% items.each do |item| %>
-          <li>
-            <%= link_to item[:url], item[:title] %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  </div>
-
   <% items.each do |item| %>
-    <%= link_to item[:url], class: 'hidden-xs hidden-sm' do %>
+    <%= link_to item[:url] do %>
       <h4><%= item[:title] %></h4>
     <% end %>
   <% end %>
