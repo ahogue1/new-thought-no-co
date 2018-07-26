@@ -1,10 +1,27 @@
 
-.flex-sb{
+.flex-sb {
   display: flex;
   justify-content: space-between;
 }
 
-.registration_email, .registration_last_name{
-  width: 283px;
+.flex-sb .form-group {
+  width: 50%;
 }
 
+.registration_email, .registration_last_name{
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .flex-sb {
+    display: block;
+  }
+
+  .flex-sb .form-group {
+    width: 100%;
+  }
+
+  .registration_email, .registration_last_name{
+    margin-left: 0;
+  }
+}
