@@ -120,7 +120,7 @@
   width: 100%;
   display: flex;
   background-color: white;
-  justify-content: space-around;
+  justify-content: space-between;
   a{ font-size: 14px; }
   h4{ font-size: 18px;}
 }
@@ -137,7 +137,8 @@
 
 @media screen and (max-width: 400px) {
   .navbar-sticky h4 {
-    font-size: 16px;
+    font-size: 15px;
+    padding: 0 2px;
   }
 }
 
