@@ -164,6 +164,28 @@
           </ul>
         </li>
 
+        <li class="dropdown-submenu">
+          <%= link_to "#", class: 'dropdown-submenu-item' do %>
+            Be Of Service
+            <span class="caret"></span>
+          <% end %>
+
+          <ul class="dropdown-menu">
+            <li>
+              <%= link_to "Pastoral Care", be_of_service_path %>
+            </li>
+            <li>
+              <%= link_to "Community Outreach", be_of_service_path(anchor: 'outreach') %>
+            </li>
+            <li>
+              <%= link_to "Volunteering", be_of_service_path(anchor: 'volunteering') %>
+            </li>
+            <li>
+              <%= link_to "Ways to Give", be_of_service_path(anchor: 'ways-to-give') %>
+            </li>
+          </ul>
+        </li>
+
         <li>
           <%= link_to "Venue Rental", venue_path %>
         </li>
