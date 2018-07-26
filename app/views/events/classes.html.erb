@@ -20,16 +20,21 @@
     ])
   %>
 
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+  </button>
 
   <% if @classes.empty? %>
+
     <div class="event-container">
       <div class="col-md-9 col-md-offset-1">
         <h2 class ="pt">We dont' have any upcoming classes at this time,</h2>
         <h2> but check back soon!</h2>
       </div>
     </div>
+
   <% else %>
+
     <div class="event-container">
       <div class="col-md-6 col-md-offset-4">
         <h2>Upcoming Classes</h2>
@@ -50,6 +55,8 @@
           </div>
         </div>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+
+  <% end %>
+
 </div>
