@@ -18,7 +18,7 @@ function topFunction() {
 }
 
 $(document).ready(function() {
-  $('.dropdown-submenu a').on("click", function(e) {
+  $('.dropdown-submenu a.dropdown-submenu-item').on("click", function(e) {
     var $menu = $(this).next('ul');
     $('.dropdown-submenu .dropdown-menu').not($menu).hide();
 
