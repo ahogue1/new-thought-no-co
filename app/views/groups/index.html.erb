@@ -33,14 +33,25 @@
   <% @groups.each do |group| %>
     <div class="row group-row">
       <div class="col-md-8 col-md-offset-1">
-        <h4>
-          <%= group.name.titleize %>
-        </h4>
-        <p>
-          <%= group.schedule %>
-        </p>
-        <p><%= group.description %></p>
-        <p>To join <%= group.name.titleize %> contact: <%= group.contact %></p>
+        <% if group.name? %>
+          <h4>
+            <%= group.name.titleize %>
+          </h4>
+        <% end %>
+        <% if group.schedule? %>
+          <p>
+            <%= group.schedule %>
+          </p>
+        <% end %>
+        <% if group.description? %>
+          <p><%= group.description %></p>
+        <% end %>
+        <% if group.name? && group.contact? %>
+          <p>To join <%= group.name.titleize %> contact: <%= group.contact %></p>
+        <% elsif group.contact? %>
+          <p>To join contact: <%= group.contact %></p>
+        <% end %>
+
       </div>
     </div>
   <% end %>
