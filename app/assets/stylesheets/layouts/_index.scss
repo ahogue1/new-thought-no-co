@@ -33,6 +33,10 @@
   color: $blue;
 }
 
+.tc{
+  text-align: center;
+}
+
 @media screen and (min-width: 850px) {
   .fa-arrow-up:before {
     content: 'Back to Top';
