@@ -29,7 +29,8 @@
     <div class="event-container">
       <div class="col-md-10 col-md-offset-1">
         <h2 class ="pt">We dont' have any upcoming events at this time,</h2>
-        <h2> but check back soon!</h2>
+        <h3>Check out the calendar for guest speakers, guest musicians, and the latest talk titles. </h3>
+        <%= link_to 'Calendar', calendar_path, class: "btn btn-primary" %>
       </div>
     </div>
 
@@ -50,6 +51,7 @@
               <%= event.schedule %>
               <span>Price: <%= humanized_money_with_symbol(event.general_price) %></span>
             </p>
+            <p> <%= event.facilitator %></p>
             <p><%= event.description %></p>
             <%= link_to 'Register', event, class: "btn btn-primary" %>
           </div>
