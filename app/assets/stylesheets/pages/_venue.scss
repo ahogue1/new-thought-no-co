@@ -1,0 +1,15 @@
+.venue-col {
+  padding-top: 10px;
+}
+
+.venue-heading {
+  margin-left: 40%;
+}
+
+@media screen and (max-width:841px) {
+
+  .venue-heading {
+    margin-left: 52%;
+    text-align: right;
+  }
+}
