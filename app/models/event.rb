@@ -1,6 +1,9 @@
 class Event < ApplicationRecord
   has_many :registrations
 
+  validates :end_date, :start_date, :event_type, presence: true
+  validates :general_price_cents, :member_price_cents, :tithe_price_cents, numericality: { greater_than_or_equal_to: 50 }
+
   monetize :general_price_cents
   monetize :member_price_cents
   monetize :tithe_price_cents
@@ -27,8 +30,8 @@ class Event < ApplicationRecord
       pretty_value { value.capitalize }
     end
 
-    field :credits do
-      label "Credits available?"
+    field :schedule do
+      label "Schedule (ie. Mondays from 5 - 6pm)"
     end
 
     field :general_price_cents do
@@ -43,7 +46,7 @@ class Event < ApplicationRecord
       label "Tithing Member Price in Cents (no decimal)"
     end
 
-    exclude_fields :registrations
+    exclude_fields :registrations, :credits
 
   end
 
