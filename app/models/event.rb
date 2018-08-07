@@ -9,6 +9,10 @@ class Event < ApplicationRecord
     %w(event class)
   end
 
+  def credits_enum
+    %w(Yes No)
+  end
+
   rails_admin do
     list do
       include_fields :id, :title, :start_date, :facilitator
@@ -22,6 +26,25 @@ class Event < ApplicationRecord
     field :event_type do
       pretty_value { value.capitalize }
     end
+
+    field :credits do
+      label "Credits available?"
+    end
+
+    field :general_price_cents do
+      label "General Price in Cents- ie: for $10 enter: 1000)"
+    end
+
+     field :member_price_cents do
+      label "Member Price in Cents (no decimal)"
+    end
+
+     field :tithe_price_cents do
+      label "Tithing Member Price in Cents (no decimal)"
+    end
+
+    exclude_fields :registrations
+
   end
 
   def prices_collection
