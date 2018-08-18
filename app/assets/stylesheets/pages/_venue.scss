@@ -6,8 +6,21 @@
   margin-left: 40%;
 }
 
-@media screen and (max-width:841px) {
+@media screen and (min-width:768px) {
+  .vertical-center {
+    display: flex;
+    align-items: center;
+  }
+}
 
+@media screen and (max-width:1199px) {
+  .fix-width {
+    max-width: 600px;
+    margin: 25px auto 12.5px;
+  }
+}
+
+@media screen and (max-width:841px) {
   .venue-heading {
     margin-left: 52%;
     text-align: right;
