@@ -55,7 +55,6 @@
             <% if event.schedule? %>
               <p>
                 <%= event.schedule %>
-                <span>Price: <%= humanized_money_with_symbol(event.general_price) %></span>
               </p>
             <% end %>
             <p> <%= event.facilitator %></p>
