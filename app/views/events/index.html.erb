@@ -49,15 +49,12 @@
                 <%= link_to event.title, event %>
               </h3>
             <% end %>
-            <% if event.start_date? %>
-              <h4> <%= event.start_date.strftime('%A, %d %b %Y') %></h4>
-            <% end %>
             <% if event.schedule? %>
-              <p>
+              <h4>
                 <%= event.schedule %>
-              </p>
+              </h4>
             <% end %>
-            <p> <%= event.facilitator %></p>
+           <!--  <p> <%= event.facilitator %></p> -->
             <p><%= event.description %></p>
             <%= link_to 'Register', event, class: "btn btn-primary" %>
           </div>
