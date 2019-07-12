@@ -7,8 +7,7 @@ class ContactMailer < ApplicationMailer
   #
   def prayer_request(request)
     @request = request
-    # mail(to: "info@newthoughtnoco.org", subject: "New Prayer Request")
-    mail(to: "hogue.a@gmail.com", subject: "New Prayer Request")
+    mail(to: "info@newthoughtnoco.org", subject: "New Prayer Request")
 
   end
 
