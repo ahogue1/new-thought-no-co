@@ -1,6 +1,6 @@
-//= require jquery
 //= require rails-ujs
-//= require bootstrap-sprockets
+//= require jquery
+//= require micromodal/dist/micromodal
 //= require_tree .
 
 
@@ -37,6 +37,7 @@ $(document).ready(function() {
     $('html, body').animate({ scrollTop: 0 }, 800);
   });
 
-  $('#alertModal').modal('show');
+  MicroModal.init();
+  MicroModal.show('modal-1');
 });
 

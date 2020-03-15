@@ -109,13 +109,14 @@
   <%= render 'location' %>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
+
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+      <header class="modal__header">
         <h3 class="modal-title" id="exampleModalLongTitle">COVID-19 Notice</h3>
-      </div>
+        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+      </header>
       <div class="modal-body">
         <p>
           We have listened to the government’s requests for social distancing. Our offices will be closed until at least the end of March. All classes & workshops are postponed: please watch for their rescheduled dates. If you need pastoral care, please call 970-224-1206 - calls are forwarded to our team.
@@ -129,9 +130,9 @@
 
         <p>Or watch later on YouTube by connecting here: <a href=" https://www.youtube.com/channel/UCDkLBQB8gyIEpNZ24vzJ21Q" target="blank">NTNC YouTube</a></p>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
+      <footer class="modal__footer">
+        <button class="btn btn-secondary" data-micromodal-close aria-label="Close this dialog window">Close</button>
+      </footer>
     </div>
   </div>
 </div>

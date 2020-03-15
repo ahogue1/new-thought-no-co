@@ -272,6 +272,7 @@ DEPENDENCIES
   font-awesome-sass (~> 5.0.9)
   httparty (~> 0.13.7)
   jbuilder (~> 2.0)
+  jquery-rails (~> 4.3, >= 4.3.3)
   letter_opener
   listen (~> 3.0.5)
   money-rails (~> 1.6, >= 1.6.1)
