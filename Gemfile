@@ -21,7 +21,7 @@ gem 'webpacker'
 
 gem 'money-rails', '~> 1.6', '>= 1.6.1'
 gem 'rails_admin', '~> 1.3'
-gem 'httparty', '~> 0.18.1'
+gem 'httparty', '~> 0.21.0'
 gem 'stripe', '~> 3.17'
 
 group :development do
